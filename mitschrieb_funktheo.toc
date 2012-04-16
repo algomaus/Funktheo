@@ -1,0 +1,12 @@
+\select@language {ngerman}
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {0}Organisatorisches}{2}{chapter.0}
+\contentsline {section}{\numberline {0}Themen der Vorlesung}{2}{section.0.0}
+\contentsline {chapter}{\numberline {1}Komplexe Zahlen}{3}{chapter.1}
+\contentsline {section}{\numberline {1}Definition der komplexen Zahlen}{3}{section.1.1}
+\contentsline {paragraph}{Exkurs}{3}{section*.3}
+\contentsline {paragraph}{Exkurs}{3}{section*.4}
+\contentsline {section}{\numberline {2}Rechnen mit komplexen Zahlen}{4}{section.1.2}
+\contentsline {paragraph}{Exkurs}{4}{section*.5}
+\contentsline {paragraph}{Exkurs}{5}{section*.6}
+\contentsline {section}{\numberline {3}Konvergenz von Folgen komplexer Zahlen}{5}{section.1.3}
