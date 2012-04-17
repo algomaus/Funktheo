@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.20a-2.2 (MiKTeX 2.4) (preloaded format=latex 2011.10.30)  17 APR 2012 17:03
+This is pdfeTeX, Version 3.141592-1.20a-2.2 (MiKTeX 2.4) (preloaded format=latex 2011.10.30)  18 APR 2012 01:51
 entering extended mode
 **mitschrieb_funktheo.tex
 (mitschrieb_funktheo.tex
@@ -971,29 +971,46 @@ Package marginnote Info: right page because not two side mode on input line 338
 .
 Package marginnote Info: xpos seems to be 140.29666pt,
 (marginnote)             \marginnoterightadjust ignored on input line 338.
- [6 <images/16_04_12_02.jpg>]
-(mitschrieb_funktheo.aux)
+Package marginnote Info: Margin note 7.2 is on absolute page 7
+(marginnote)              on input line 352.
+Package marginnote Info: right page because not two side mode on input line 352
+.
+Package marginnote Info: xpos seems to be 140.29666pt,
+(marginnote)             \marginnoterightadjust ignored on input line 352.
+Package marginnote Info: Margin note 7.3 is on absolute page 7
+(marginnote)              on input line 358.
+Package marginnote Info: right page because not two side mode on input line 358
+.
+Package marginnote Info: xpos seems to be 143.29533pt,
+(marginnote)             \marginnoterightadjust ignored on input line 358.
+
+Overfull \hbox (19.97054pt too wide) in paragraph at lines 358--358
+|\T1/lmr/m/it/10.95 Beschränktheit 
+ []
+
+[6 <images/16_04_12_02.jpg>] [7] (mitschrieb_funktheo.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 14159 strings out of 95516
- 231809 string characters out of 1189554
- 286823 words of memory out of 1283447
- 16594 multiletter control sequences out of 35000
+ 14169 strings out of 95516
+ 231934 string characters out of 1189554
+ 286854 words of memory out of 1283478
+ 16596 multiletter control sequences out of 35000
  53580 words of font info for 55 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 607
  56i,13n,55p,438b,464s stack positions out of 1500i,500n,5000p,200000b,32768s
- 147 PDF objects out of 300000
- 46 named destinations out of 300000
+ 161 PDF objects out of 300000
+ 54 named destinations out of 300000
  87 words of extra memory for PDF output out of 65536
-<C:\texmf\fonts\type1\bluesky\symbols\msam10.pfb><C:\texmf\fonts\type1\bluesk
-y\cm\cmmi8.pfb><C:\texmf\fonts\type1\bluesky\cm\cmex10.pfb><C:\texmf\fonts\type
-1\bluesky\cm\cmr8.pfb><C:\texmf\fonts\type1\bluesky\cm\cmsy8.pfb>{cork-lm.enc}<
-C:\texmf\fonts\type1\public\lm\lmri10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmsy
-10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmr10.pfb><C:\texmf\fonts\type1\bluesky
-\cm\cmmi10.pfb><C:\texmf\fonts\type1\bluesky\symbols\msbm10.pfb><C:\texmf\fonts
-\type1\public\lm\lmbx10.pfb><C:\texmf\fonts\type1\public\lm\lmr10.pfb><C:\texmf
-\fonts\type1\public\lm\lmr12.pfb><C:\texmf\fonts\type1\public\lm\lmbx12.pfb>
-Output written on mitschrieb_funktheo.pdf (7 pages, 229656 bytes).
+<C:\texmf\fonts\type1\bluesky\cm\cmr6.pfb><C:\texmf\fonts\type1\bluesky\symbo
+ls\msam10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmmi8.pfb><C:\texmf\fonts\type1\
+bluesky\cm\cmex10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmr8.pfb><C:\texmf\fonts
+\type1\bluesky\cm\cmsy8.pfb>{cork-lm.enc}<C:\texmf\fonts\type1\public\lm\lmri10
+.pfb><C:\texmf\fonts\type1\bluesky\cm\cmsy10.pfb><C:\texmf\fonts\type1\bluesky\
+cm\cmr10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmmi10.pfb><C:\texmf\fonts\type1\
+bluesky\symbols\msbm10.pfb><C:\texmf\fonts\type1\public\lm\lmbx10.pfb><C:\texmf
+\fonts\type1\public\lm\lmr10.pfb><C:\texmf\fonts\type1\public\lm\lmr12.pfb><C:\
+texmf\fonts\type1\public\lm\lmbx12.pfb>
+Output written on mitschrieb_funktheo.pdf (8 pages, 240072 bytes).

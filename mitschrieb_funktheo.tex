@@ -341,4 +341,36 @@ $$\lim_{k\to\infty}|z_k-a|=0 \quad \left(\lim_{k\to\infty}z_k=a \text{ oder } z_
 $$\Leftrightarrow\quad\forall \epsilon>0 \quad\exists n\in\N \quad\forall k\geq n:|z_k-a|<\epsilon$$
 $a$ heißt Grenzwert.
 \end{definition}
+
+\begin{theorem}{}
+$z_k\to a \quad (k\to \infty) \Leftrightarrow
+Re(z_k)\to Re(a) \text{ \underline{und} }Im(z_k)\to Im(a) \quad (k\to\infty)$\newline
+Denn: $|z_k|^2=(Re(z_k)-Re(a))^2+(Im(z_k)-Im(a))^2$
+\end{theorem}
+
+\begin{definition}{Cauchy-Folge}
+Die Folge $(z_k)$ heißt \underline{Cauchy-Folge}, falls
+$$\forall\epsilon>0 \quad \exists N\in\N \quad \forall k,l\geq N: \quad |z_k-z_l|<\epsilon$$
+$\Rightarrow$ Jede konvergente Folge ist eine Cauchy-Folge.
+\end{definition}
+
+\begin{definition}{Beschränktheit von Folgen}
+Die Folge $(z_k)\subset\C$ heißt \underline{beschränkt}, falls es ein $R>0$ gibt,
+dass $|z_k|<R\quad\forall k\in \N$ gilt.
+\end{definition}
+
+\begin{theorem}{Bolzano-Weierstra\ss}
+In $\C$ gelten:
+\begin{enumerate}[1)]
+\item Jede beschr\"ankte Folge besitzt eine konvergente Teilfolge.
+\item Jede Cauchy-Folge ist auch konvergent ($\C$ ist vollst\"andig).
+\end{enumerate}
+\end{theorem}
+
+\paragraph{\"Ubungsaufgabe}$\;$\\
+$\frac{(1+i)^4}{(1-i)^3}+\frac{(1-i)^4}{(1+i)^3}=:a$, gesucht: $Re(a),Im(a)$\newline
+Es ist $\overline{\left(\frac{(1+i)^4}{(1-i)^3}\right)}=\frac{(1-i)^4}{(1+i)^3}$\newline
+$\Rightarrow a=2Re\left(\frac{(1+i)^4}{(1-i)^3}\right)$ und $Im(a)=0$.\newline
+$\frac{1+i}{1-i}\cdot \frac{1+i}{1+i}=\frac{2i}{2}=i
+\Rightarrow a=2Re((1+i)i^3)=2Re(-i(1+i))=2$.
 \end{document}

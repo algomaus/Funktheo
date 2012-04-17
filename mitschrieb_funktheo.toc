@@ -13,3 +13,4 @@
 \contentsline {paragraph}{Exkurs}{5}{section*.8}
 \contentsline {paragraph}{Beispiel}{6}{section*.9}
 \contentsline {section}{\numberline {3}Konvergenz von Folgen komplexer Zahlen}{6}{section.1.3}
+\contentsline {paragraph}{\"Ubungsaufgabe}{7}{section*.10}
