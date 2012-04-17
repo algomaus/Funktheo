@@ -96,6 +96,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\OO}{{\ensuremath{\mathcal{O}}}}
+\newcommand{\hateq}{{\ensuremath{\stackrel{\wedge}{=}}}}
 
 %\renewcommand{\thechapter}{\Roman{chapter}}
 \renewcommand{\thesection}{\arabic{section}}
@@ -195,8 +196,12 @@ Zweite Hälfte der VL: Anwendungen: Residuensatz
 \begin{definition}{Definition von $\C$}
 Eine komplexe Zahl ist ein geordnetes Paar von rellen Zahlen $(x,y)$
 
-Für $z=(x,y), w=(u,v)$ gilt $(z=w) \Leftrightarrow x = u$ und $y = v$.
+Für $z=(x,y), w=(u,v)$ gilt $(z=w) :\Leftrightarrow x = u$ und $y = v$.
 \end{definition}
+
+\paragraph{Exkurs:} Gleichheit bei rationalen Zahlen als Tupel ganzer Zahlen \newline
+Hier ist $(1,2)=(2,4)$, denn $(1,2)\hateq \frac{1}{2} = \frac{2}{4} \hateq(2,4)$.
+
 
 \begin{definition}{Addition und Multiplikation komplexer Zahlen}
 	Seien $z = (x,y), w = (u,v) \in \C$.
@@ -222,12 +227,12 @@ $zw = 0 \Leftrightarrow z = 0 $ oder $w=0$ ist falsch!
 \paragraph{Exkurs}
 Durch die Körperaxiome folgt:
 \begin{itemize}
-	\item $z+a=b$ ist lösbar.
-	\item $az = b$ ist lösbar für $a \neq 0$. 
+	\item $z+a=b$ ist (eindeutig) lösbar.
+	\item $az = b$ ist (eindeutig) lösbar für $a \neq 0$. 
 \end{itemize}
 
 \begin{theorem}
-	$x,y \in \R$. Dann gelten:
+	Seien $x,y \in \R$. Dann gelten:
 	\begin{itemize}
 		\item $(x,0) + (y,0) = (x+y,0)$
 		\item $(x,0) \cdot (y,0) = (xy,0)$
@@ -250,11 +255,14 @@ Durch die Körperaxiome folgt:
 	Für reelle Zahlen $x,y$ hat man $(x,y) = x+iy \quad (=z)$
 \end{theorem}
 
+\paragraph{Bemerkung} $x,y$ stehen standardmäßig für reelle, $z$ für komplexe Zahlen.
+
 \section{Rechnen mit komplexen Zahlen}
 
 \begin{definition}{konjugiert komplexe}
 	Zu $z = x+iy$ ist $\bar{z} = x - iy$ die konjugiert komplexe Zahl.
 	$$x = Re(z), \quad y = Im(z)$$
+	Beachte $Im(z) \in \R$!
 	\begin{center}
 		\includegraphics[scale=0.3]{images/16_04_12_01.jpg}
 	\end{center}
@@ -262,41 +270,41 @@ Durch die Körperaxiome folgt:
 	\begin{itemize}
 	\item $Re(z+w) = Re(z) + Re(w)$
 	\item $Im(z+w) = Im(z) + Im(w)$
-	\item $x = Re(z) = \frac{1}{2} (z + \bar{z}), Im(z) = \frac{1}{2i} (z - \bar{z}) = y$
+	\item Für $z=x+iy$: $x = Re(z) = \frac{1}{2} (z + \bar{z}), Im(z) = \frac{1}{2i} (z - \bar{z}) = y$
 	\end{itemize}
 \end{definition}
 
 \begin{theorem}
-	$z,w \in \C$
+	Seien $z,w \in \C$
 	\begin{enumerate}[a)]
 	\item $z \in \R \Leftrightarrow z = \bar{z}$
 	\item $\bar{\bar{z}} = z$
-	\item $\bar{z+w} = \bar{z} + \bar{w}, \bar{zw} = \bar{z} \bar{w}$
+	\item $\overline{z+w} = \bar{z} + \bar{w}, \overline{zw} = \bar{z} \bar{w}$
 	\item $z\bar{z} \in \R, z \bar{z} > 0 \Leftrightarrow z \neq 0, z \bar{z} = 0 \Leftrightarrow z = 0$
 	\end{enumerate}
-	Zu $d)$: $z = x+iy, z \bar{z} = x^2 + y^2 =: (z)^2$
+	Zu $d)$: $z = x+iy, z \bar{z} = x^2 + y^2 = |z|^2$
 \end{theorem}
 	
 \begin{definition}{Betrag}
-Für $z \in \C$ ist $|z| = \sqrt{z \bar{z}}$ der Betrag.
+Für $z \in \C$ ist $|z| := \sqrt{z \bar{z}}$ der Betrag.
 
 Speziell: $z = x \in \R: |z| = |x| = \sqrt{x^2}$
 \end{definition}
 
 \paragraph{Exkurs}
-Beweis von $\bar{(\frac{z}{w})} = \frac{\bar{z}}{\bar{w}}$:
+Beweis von $\overline{(\frac{z}{w})} = \frac{\bar{z}}{\bar{w}}$:
 
-$$\overline{\left(\frac{1}{w}\right)} = \overline{\left(\frac{1 \bar{w}}{w \bar{w}}\right)} = \overline{\left(\frac{\bar{w}}{|w|^2}\right)} = \frac{w}{|w|^2} = \frac{1}{\bar{w}}$$ mit Verwendung von $\overline{\left(\frac{z}{w}\right)} = \overline{\left(z \frac{1}{w}\right)}$
+$$\overline{\left(\frac{1}{w}\right)} = \overline{\left(\frac{1 \bar{w}}{w \bar{w}}\right)} = \overline{\left(\frac{\bar{w}}{|w|^2}\right)} = \frac{w}{|w|^2} = \frac{1}{\bar{w}}$$ und dann Verwendung von $\overline{\left(\frac{z}{w}\right)} = \overline{\left(z \frac{1}{w}\right)}$
 
 \begin{theorem}
 	$z,w \in \C$.
 	\begin{enumerate}[a)]
-		\item \textcolor{blue}{$|z| \geq 0$ und $= 0$ nur für $z = 0$}
+		\item \textcolor{blue}{$|z| \geq 0$ und $|z|= 0 \Leftrightarrow z = 0$}
 		\item $|\bar{z}| = |z|$
 		\item $|zw| = |z||w| \Rightarrow |\frac{z}{w}|= \frac{|z|}{|w|}$
 		\item $|Re(z)| \leq |z|, |Im(z)| \leq |z|$
 		\item \textcolor{blue}{$|z+w| \leq |z| + |w|$}
-		\item $|z+w|^2 = |z|^2 + |w|^2 + 2 Re \bar{z} w$
+		\item $|z+w|^2 = |z|^2 + |w|^2 + 2 Re (\bar{z} w)$
 		\item $|z-w|$ ist der Abstand von $z$ zu $w$.
 		\item \textcolor{blue}{$|\lambda z| = |\lambda| |z|, \lambda \in \R$}
 	\end{enumerate}
@@ -319,10 +327,18 @@ $|z-w| = \sqrt{(x-u)^2 + (y-v)^2}$
 \includegraphics[scale=0.2]{images/16_04_12_02.jpg}
 \end{center}
 
-$\{z \mid |z-5| < 3\}$
+\paragraph{Beispiel}
+$\{z \mid |z-5| < 3\}$ ist Kreis um 5 mit Radius 3.
 
 \section{Konvergenz von Folgen komplexer Zahlen}
 
 Durch $d(z,w):= |z-w|, z,w \in \C$ wird auf $\C$ eine \underline{Metrik} definiert.
 
+\begin{definition}{}
+$(z_k)$ sei Folge komplexer Zahlen.\newline
+$(z_k)$ heißt \underline{konvergent}, falls ein $a \in \C$ existiert mit
+$$\lim_{k\to\infty}|z_k-a|=0 \quad \left(\lim_{k\to\infty}z_k=a \text{ oder } z_k\to a (k\to\infty)\right)$$
+$$\Leftrightarrow\quad\forall \epsilon>0 \quad\exists n\in\N \quad\forall k\geq n:|z_k-a|<\epsilon$$
+$a$ heißt Grenzwert.
+\end{definition}
 \end{document}
