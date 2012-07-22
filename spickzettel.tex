@@ -1,0 +1,466 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass[a4paper, 10pt, DIV20, headings=small]{scrartcl}
+\usepackage[left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm,includeheadfoot]{geometry}
+\usepackage{cite}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} 
+\usepackage{amsthm,amsfonts,amssymb,amsmath,amsbsy}
+%\usepackage{ngerman}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{capt-of}
+\usepackage{bibgerm}
+
+\pagestyle{empty}
+\title{Nachgeschaute Sachen}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Satz}
+\newtheorem{example}{Beispiel}
+\newtheorem{remark}{Bemerkung}
+\newtheorem{corollary}{Korollar}
+\theoremstyle{plain}
+\newtheorem{satz}{Satz}
+
+\begin{document}
+
+%\begin{center}
+%\LARGE{Proseminar Elementare Topologie SS 2011 \\} \hspace{2.25cm}
+%\vspace{0.5cm}
+%\LARGE{Umlaufzahl}
+%\newline
+%\vspace{0.5cm}
+%\large
+%Sarah Lutteropp \\
+%29. Juni 2011
+%\end{center}
+
+%\begin{figure}[Ausrichtung]
+%\centering
+%\includegraphics[scale = 0.75]{Windungszahl5.png}
+%\caption{Ein schönes Bild}
+%\label{fig:Bild1}
+%\end{figure}
+
+\vspace{0.5cm}
+
+ %$\Theta \colon [a,b] \to
+%\mathbb{R} \mbox{ mit } \gamma'(t) = (\cos(\Theta(t)), \sin(\Theta(t)))$
+%bezeichnet man als \textbf{Winkelfunktion}. (TODO: passt nicht zur Definition
+%von eben)
+%\end{definition}
+
+%\marginpar{123} %Randnotiz
+
+\paragraph{Polarkoordinatendarstellung komplexer Zahlen}
+Sei $z = x+iy \in \mathbb{C} \backslash \{0\}$.
+\begin{center}
+$z = r \cdot e^{i \varphi}$ mit $r:= |z|$ und
+\end{center}
+$$\varphi = \text{arg}(z) := \begin{cases} \text{sign}(y) \arccos(\frac{x}{r}) & z \in \mathbb{C} \backslash \mathbb{R}_- \\ \pi & z \in (- \infty, 0) \end{cases} \in (- \pi, \pi]$$
+
+\paragraph{Spezielle Werte von $\arccos$}
+\[
+\begin{array}{c||c|c|c|c|c|c|c|c|c}
+x & -1 & -\frac{\sqrt{3}}{2} & - \frac{\sqrt{2}}{2} = - \frac{1}{\sqrt{2}} & - \frac{1}{2} & 0 & \frac{1}{2} & \frac{\sqrt{2}}{2} = \frac{1}{\sqrt{2}} & \frac{\sqrt{3}}{2} & 1 \\
+\hline 
+\arccos(x) & \pi & \frac{5 \pi}{6} & \frac{3 \pi}{4} & \frac{2 \pi}{3} & \frac{\pi}{2} & \frac{\pi}{3} & \frac{\pi}{4} & \frac{\pi}{6} & 0 \\
+\end{array}
+\]
+
+\paragraph{Polynomdivision}
+Nullstelle raten, durch $x$ minus Nullstelle teilen
+
+\paragraph{p-q-Formel}
+$x^2 + px +q = 0$
+$$\Rightarrow x_{1/2} = - \frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2 - q}$$
+
+\paragraph{n-te Einheitswurzel}
+$z^n = r \cdot e^{i \varphi}, \quad n \in \mathbb{N}$
+hat $n$ Lösungen der Form
+$$z_k = \sqrt[n]{r} \cdot e^{i \frac{2\pi k + \varphi}{n}}, \quad k = 0, \ldots, n-1$$
+Generell: Darauf achten, dass der Winkel $\varphi$ in $(-\pi,\pi]$ liegt!
+Bei $n$-ten Wurzeln macht es also Sinn, $z$ in Polarkoordinaten darzustellen
+
+\paragraph{Eulersche Formel}
+$e^{i \varphi} = \cos(\varphi) + i \cdot \sin(\varphi)$
+
+\paragraph{Gleichung für Kreis mit Zentrum $a$ und Radius $r$}
+$|z-a| = r$
+
+\paragraph{Gleicher Abstand von zwei Punkten}
+Wird ausgedrückt durch $|z-a| = |z-b|$
+
+\paragraph{Stetigkeit von Funktionen}
+\begin{itemize}
+\item $f(z)$ ist nicht stetig in $p$: Folge $z_n$ angeben, sodass gilt $z_n \overset{n \rightarrow \infty}{\longrightarrow} p$, $f(z_n) \nrightarrow f(p)$ für $n \rightarrow \infty$. Beliebte Folgen für $p=0$: $1/n$, $i/n$, $(i+1)/n$
+\item $f(z)$ ist stetig in $p$: Zeige $f(z) \overset{z \rightarrow p}{\longrightarrow} f(p)$. Für $f(p)=0$ bietet es sich an, zu zeigen dass $|f(z)| \overset{z \rightarrow p}{\longrightarrow} 0$.
+\end{itemize}
+
+\paragraph{Stereographische Projektion}
+$$\pi(x_1,x_2,x_3) = \frac{x_1 + i x_2}{1 - x_3}$$
+$$p(x+iy) = \frac{1}{1+x^2+y^2}\cdot (2x, 2y, x^2+y^2-1)$$
+
+\paragraph{Chordaler Abstand}
+$$\chi (z,w) = ||p(z)-p(w)|| = 2 \frac{|z-w|}{\sqrt{1+|z|^2} \cdot \sqrt{1+|w|^2}}$$
+
+\paragraph{Verallgemeinerter Kreis}
+$\alpha \in \mathbb{C}, \beta \in \mathbb{R}, \varepsilon \beta < |\alpha|^2, \varepsilon \in \mathbb{R}$
+$$\varepsilon |z|^2 + \overline{\alpha}z + \alpha \overline{z} + \beta = 0$$
+Für $\varepsilon = 1$ ist das die Gleichung des Kreises um $- \alpha$ mit Radius $\sqrt{|\alpha|^2-\beta}$.
+
+Für $\varepsilon = 0$ ist das eine Gerade.
+
+\paragraph{Cauchy-Riemannsche Differentialgleichungen}
+$u(x,y) \hat{=}$ Realteil von $f(x+iy)$, 
+$v(x,y) \hat{=}$ Imaginärteil von $f(x+iy)$
+
+$D_1u = D_2v,\quad D_2u = -D_1v$
+
+\paragraph{Komplexe Differenzierbarkeit}
+$f$ ist komplex diffbar $\Leftrightarrow$ $f$ ist reell diffbar und die Cauchy-Riemannschen DGL sind erfüllt. Dann:
+$$f^\prime(x + iy) = D_1 u(x, y) + i \cdot D_1 v(x, y)$$
+
+\paragraph{Konforme Abbildung}
+$f \in \mathcal{H}(G), f^\prime(z) \neq 0$ heißt \textbf{konforme Abbildung}. Sie erhält Winkel in Größe und Drehsinn.
+
+
+\paragraph{Ableitungsregeln}
+$$\left(f(x) \cdot g(x)\right)^\prime = f^\prime(x) \cdot g(x) + f(x) \cdot g^\prime(x)$$
+$$\left(\frac{f(x)}{g(x)}\right)^\prime = \frac{f^\prime(x) \cdot g(x) - f(x) \cdot g^\prime(x)}{g(x)^2}$$
+$$\left(f(g(x))\right)^\prime = f^\prime(g(x)) \cdot g^\prime(x)$$
+$$(f^{-1})^\prime(y) = \frac{1}{f(f^{-1}(y))}$$
+$$(\log x)^\prime = \frac{1}{x}$$
+$$\frac{d}{dw} z^w = \log(z) z^w$$
+
+\paragraph{Integrationsregeln}
+$$\int x^n dx = \frac{x^{n+1}}{n+1}+c$$
+$$\int_a^b f^\prime(x) \cdot g(x) dx = [f(x) \cdot g(x)]_a^b - \int_a^b f(x) \cdot g^\prime(x) dx$$
+Substitutionsregel:
+\begin{enumerate}
+\item Substituiere $u = u(x)$
+\item $dx$ ersetzen: $u^\prime = \frac{du}{dx}$ nach $dx$ auflösen
+\item $a$ und $b$ durch $u(a)$ und $u(b)$ ersetzen
+\item Bei unbestimmten Integralen: Danach Rücksubstitution
+\end{enumerate}
+$$\int_a^b f(x) dx = \int_{u(a)}^{u(b)} f(u(x)) du$$
+$$\int e^{ax}dx = \frac{1}{a} e^{ax} \quad a \neq 0$$
+
+\paragraph{Häufungspunkt}
+$z_0$ heißt Häufungspunkt von $M$
+$$\Leftrightarrow \forall \varepsilon > 0 \quad \exists z \in M \backslash \{z_0\} \quad z \in D(z_0, \varepsilon) = \{z \in \mathbb{C} \mid |z-z_0| < \varepsilon\}$$
+
+\paragraph{Trick mit der Dreiecksungleichung}
+$$|a-b| = |a-b+c-c| \leq |a-c| + |c-b|$$
+
+\paragraph{Kompakte Menge}
+Die Menge $K \subset \mathbb{C}$ heißt kompakt, falls aus jeder Folge $(z_n) \subset K$ eine Teilfolge
+ausgewählt werden kann, die gegen ein Element aus $K$ konvergiert.
+$$K \subset \mathbb{C} \text{ kompakt } \Leftrightarrow K \text{ beschränkt und abgeschlossen}$$
+
+\paragraph{Bolzano-Weierstraß}
+Jede beschränkte Folge hat eine konvergente Teilfolge.
+
+\paragraph{Unbeschränkt in Umgebung von $z \in \mathbb{C}$}
+Wenn eine Funktion in jeder Umgebung von $z$ unbeschränkt ist, kann sie dort nicht differenzierbar sein.
+
+\paragraph{Harmonische Funktion}
+$$u \in C^2(D,\mathbb{R}) \text{ harmonisch } :\Leftrightarrow \Delta u(x,y) = D_1^2 u + D_2^2 u = 0$$
+
+\paragraph{Etwas über Konvergenz von Reihen}
+$$\sum\limits_{k=1}^\infty{z_k} \text{ konvergiert } \Rightarrow \sum\limits_{k=1}^\infty{\text{Re}(z_k)} \text{ konvergiert}$$
+
+\paragraph{Majorantenkriterium}
+$$|a_k| \leq |b_k| \forall k, \sum\limits_{k=1}^{\infty}{b_k} \text{ ist konvergent } \Rightarrow \sum\limits_{k=0}^\infty {a_k} \text{ ist absolut konvergent}$$
+
+\paragraph{Eine divergente Reihe}
+$$\sum\limits_{k=1}^\infty{\frac{1}{k}} \text{ ist divergent.}$$
+
+
+\paragraph{Trivialkriterium}
+$$\sum\limits_{k=0}^{\infty}a_n \text{ konvergent } \Rightarrow a_n \rightarrow 0 \quad (n \rightarrow \infty)$$
+
+\paragraph{Folge, die gegen $e$ geht}
+$$\left(1+\frac{1}{n}\right)^n \rightarrow e \quad (n \rightarrow \infty)$$
+
+\paragraph{Quotientenkriterium und Wurzelkriterium}
+$$\limsup\limits_{k \rightarrow \infty} \left|\frac{a_{k+1}}{a_k}\right| \leq q < 1 \Rightarrow \sum\limits_{k=0}^\infty a_k \text{ absolut konvergent}$$
+$$\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|a_k|} \leq q < 1 \Rightarrow \sum\limits_{k=0}^\infty a_k \text{ absolut konvergent}$$
+Wenn $> 1$ (bei Quotientenkriterium $\liminf$): divergent
+
+\paragraph{Geometrische Reihe}
+$$\sum\limits_{k=0}^\infty q^k \text{ mit } |q| < 1 \text{ konvergiert gegen } \frac{1}{1-q}$$
+
+\paragraph{Konvergenzradius einer Potenzreihe}
+$$R = \frac{1}{\limsup\limits_{k\rightarrow \infty} \sqrt[k]{|a_n|}} = \frac{1}{\lim\limits_{k\rightarrow \infty}{|\frac{a_{k+1}}{a_k}|}}$$
+
+\paragraph{Die Folgen $\sqrt[n]{n}$, $\sqrt[n]{x}$}
+$$\lim_{n \rightarrow \infty} \sqrt[n]{n} = 1$$
+$$\lim_{n \rightarrow \infty} \sqrt[n]{x} = 1 \quad x \in \mathbb{R}, x > 0$$
+
+\paragraph{Möbiustransformation}
+$T \colon \hat{\mathbb{C}} \rightarrow \hat{\mathbb{C}}$ Möbiustransformation $\Leftrightarrow$
+es gibt Zahlen $a,b,c,d \in \mathbb{C}$ mit $ad-bc \neq 0$ und
+$$T(z) := \begin{cases} \frac{az+b}{cz+d} & z \in \mathbb{C} \backslash -\frac{d}{c} \\
+\frac{a}{c} & z = \infty \\
+\infty & z = - \frac{d}{c} \end{cases}$$
+
+Wikipedia: Umkehrabbildung ist gegeben durch $\frac{dz-b}{-cz+a}$
+
+$$T^\prime(z) = \frac{ad-bc}{(cz+d)^2} \neq 0$$
+
+\paragraph{Möbiustransformation, die $z_1 \mapsto 0, z_2 \mapsto 1, z_3 \mapsto \infty $ abbildet.}
+$$T(z) = \begin{cases} \frac{z-z_1}{z-z_3} \frac{z_2-z_3}{z_2-z_1} & (z_1,z_2,z_3) \in \mathbb{C} \\
+\frac{z_2-z_3}{z-z_3} & z_1 = \infty \\
+\frac{z-z_1}{z-z_3} & z_2 = \infty \\
+\frac{z-z_1}{z_2-z_1} & z_3 = \infty \end{cases}$$
+
+\paragraph{Doppelverhältnis} $(z,z_1,z_2,z_3)$
+
+Es gilt: ($z,z_1,z_2,z_3 \in \widehat{\mathbb{C}}, z_i \text{ paarweise verschieden}, S \text{ Möbiustransformation}):$ 
+$$\left(z, z_1 , z_2 , z_3 ) = (S(z), S(z_1 ), S(z_2 ), S(z_3 )\right)$$
+
+
+\paragraph{Möbiustransformationen und Kreise}
+$T \colon \widehat{\mathbb{C}} \rightarrow \widehat{\mathbb{C}}$ Möbiustransformation.
+\begin{itemize}
+	\item $T$ bildet verallgemeinerte Kreise auf verallgemeinerte Kreise ab.
+	\item da $T$ stetig, werden zusammenhängende Mengen auf zusammenhängende Mengen abgebildet.
+	\item $G$ offen: $T(G) \cap T(\partial G) = \emptyset$
+	\item $T$ ist holomorph und bijektiv.
+	\item Falls $T$ $\mathbb{R}$ auf $\mathbb{R}$ abbildet, gilt $\overline{T(z)} = T(\overline{z})$.
+	\item $T$ ist symmetrieerhaltend, winkel-, orientierungs- und gebietstreu.
+	\item $T$ hat mehr als 2 Fixpunkte $\Rightarrow T = id$
+\end{itemize}
+
+\paragraph{Was zu Unendlichkeiten \ldots}
+$$\widehat{\mathbb{C}} = \mathbb{C} \cup \{\infty\}$$
+Es gibt also kein $- \infty$ in $\widehat{\mathbb{C}}$!!!
+
+$\infty$ liegt auf keinem Kreis und auf jeder Geraden.
+
+\paragraph{Spiegeln an verallgemeinerten Kreisen}
+$z_1,z_2,z_3$ auf verallgemeinertem Kreis $K$. Spiegelung von $z$ an $K$:
+$$(\varrho_K(z),z_1,z_3,z_3) = \overline{(z,z_1,z_2,z_3)}$$
+
+$l$ Gerade mit $z(t) = a + t e^{i \varphi}, a \in \mathbb{C}, \varphi \in \mathbb{R} \text{ fest}$.
+Dann:
+$$\varrho_l(z) = e^{2 i \varphi} (\overline{z} - \overline{a}) + a$$
+
+An Kreis $K$ um $a$ mit Radius $R$:
+$$\varrho_K(z) = a + \frac{R^2}{\overline{z}- \overline{a}}$$
+
+\paragraph{Hauptzweig des Logarithmus}
+$$\log(z) = \ln(|z|) + i \cdot \text{arg}(z), \quad -\pi < \text{arg}(z) < \pi, \quad z \neq 0$$
+ist auf $E_{- \pi} = \mathbb{C} \backslash (-\infty,0]$ definiert.
+
+Warnung: das Logarithmusgesetz gilt i.A. nicht!
+$$\log(a \cdot b) \neq \log(a) + \log(b), \text{ falls } |arg(a)+arg(b)| \geq \pi$$
+
+\paragraph{Potenzen}
+$$a^b = e^{b \log (a)}, \quad a,b \in \mathbb{C}, a \neq 0$$
+
+\paragraph{Einige Reihendarstellungen}
+$$\exp(z) = \sum\limits_{n=0}^\infty{\frac{z^n}{n!}}$$
+$$\sin(z) = \sum\limits_{n=0}^\infty{\frac{(-1)^n}{(2n+1)!} z^{2n+1}}$$
+$$\cos(z) = \sum\limits_{n=0}^\infty{\frac{(-1)^n}{(2n)!} z^{2n}}$$
+$$\log(z) = \sum\limits_{n=1}^\infty{(-1)^{n-1} \frac{(z-1)^n}{n}}, \quad |z-1|<1 \quad \text{(Hauptzweig)}$$
+
+\paragraph{Nette Funktionen, die man kennen sollte}
+Einheitskreis: $f(t)=e^{it}, \quad t \in [0,2\pi]$
+$$\gamma(t) = c + r \cdot e^{it}, \quad t \in [0,2\pi] \qquad \text{Kreislinie um c mit Radius r}$$ Ableitung: $i \cdot r \cdot e^{it}$
+$$\gamma(t) =w+ t(z-w), \quad t \in [0,1] \qquad \text{Verbindungsstrecke von w nach z}$$
+
+$$\hat{\gamma}(t) = \gamma(b-t+a), \quad t \in [a,b] \qquad \text{Rückwärtsweg}$$
+
+\paragraph{Kurvenintegral}
+$\gamma \colon [a,b] \rightarrow \mathbb{C}$ stückweise stetig differenzierbar.
+$$\int\limits_{\gamma} f(z) dz = \int\limits_{a}^{b}{f(\gamma(t)) \gamma^\prime(t)}$$
+
+\paragraph{Standardabschätzung für Wegintegrale}
+$$\left|\int\limits_{\gamma} f(z) dz \right| \leq l(\gamma) \cdot \max\limits_{z \in \gamma} |f(z)|$$
+
+\paragraph{Bogenlänge}
+$\gamma \colon [a,b] \rightarrow \mathbb{C}$ stückweise stetig differenzierbar.
+$$l(\gamma) = \int\limits_a^b{|\gamma^\prime (t)| dt}$$
+
+\paragraph{Integration über Summe von Wegen}
+$$\int\limits_{\gamma_1 + \gamma_2}f(z) dz = \int\limits_{\gamma_1}f(z) dz + \int\limits_{\gamma_2}f(z) dz$$
+
+\paragraph{Integral über Rückwärtsweg}
+$$\int\limits_{-\gamma}f(z)dz = - \int \limits_{\gamma} f(z) dz$$
+
+\paragraph{Cauchy Integralsatz für sternförmige Gebiete}
+Seien $D \subseteq \mathbb{C}$ ein \emph{sternförmiges} Gebiet, $f \in H(D)$ und $\Gamma \subseteq D$ eine geschlossene Kurve. Dann gilt
+$$\int_\Gamma f(z) dz = 0.$$ Insbesondere besitzt $f$ eine Stammfunktion auf $D$.
+
+\paragraph{Cauchy Integralformel für sternförmige Gebiete}
+Seien $D \subseteq \mathbb{C}$ ein \emph{sternförmiges} Gebiet, $f \in H(D)$ und $\Gamma \subseteq D$ eine geschlossene Kurve. Dann gilt
+$$n(\Gamma,z)f(z) = \frac{1}{2 \pi i} \int_\Gamma \frac{f(w)}{w-z} dw \quad \forall z \in D \backslash \Gamma.$$
+
+Insbesondere für $\gamma(t) = z_0 + r e^{it},\quad t \in [0,2\pi]$:
+$$f(z_0) = \frac{1}{2 \pi} \int\limits_{0}^{2 \pi}f(z_0 + r e^{it}) dt.$$
+
+\paragraph{Cauchy Integralformel / Integralsatz}
+Seien $D \subseteq \mathbb{C}$ offen, $f \in H(D)$ und $\Gamma_1, \ldots, \Gamma_m \subseteq D$ geschlossene Kurven mit $\sum\limits_{j=1}^m{n(\Gamma_j;w)} = 0\quad \forall w \in \mathbb{C} \backslash D$. Dann gilt
+$$\sum\limits_{j=1}^m {n(\Gamma_j;z)}f(z) = \frac{1}{2 \pi i} \sum\limits_{j=1}^m{ \int_{\Gamma_j} \frac{f(w)}{w-z} dw} \quad \forall z \in D \backslash \bigcup_j {\Gamma_j}.$$
+
+und $\sum\limits_{j=1}^m{\int\limits_{\Gamma_j}{f(z) dz}} = 0$.
+
+\paragraph{Cauchy Integralformel für Kreisringe um 0}
+$$f(z) = \frac{1}{2 \pi i} \int_{|w|=r_2} \frac{f(w)}{w-z} dw - \frac{1}{2 \pi i} \int_{|w|=r_1} \frac{f(w)}{w-z} dw \quad \forall z \text{ im Kreisring}$$
+
+\paragraph{Windungszahl}
+$\Gamma \subseteq \mathbb{C}$ geschlossene Kurve und $z \in \mathbb{C} \backslash \Gamma$.
+$$n(\Gamma, z) = \frac{1}{2 \pi i} \int_\Gamma \frac{dw}{w-z}$$
+
+
+\paragraph{Cauchyprodukt allgemein}
+$\sum\limits_{n=0}^{\infty}a_n \text{ und } \sum\limits_{n=0}^{\infty}b_n$ absolut konvergent.
+
+$$\left (\sum\limits_{n=0}^{\infty}a_n \right ) \cdot \left (\sum\limits_{n=0}^{\infty}b_n\right ) = \sum\limits_{n=0}^{\infty}{\sum\limits_{k=0}^n{a_k b_{n-k}}}$$
+
+\paragraph{Cauchyprodukt von Potenzreihen}
+$$\left( \sum\limits_{n=0}^{\infty}{a_n (x-x_0)^n} \right) \cdot 
+\left( \sum\limits_{n=0}^{\infty}{b_n (x-x_0)^n} \right) =
+\sum\limits_{n=0}^{\infty} \left( \sum\limits_{k=0}^n{a_k b_{n-k}} \right) (x-x_0)^n$$
+
+\paragraph{Ableitung einer Potenzreihe} $f(z) = \sum\limits_{n=0}^{\infty}{a_n (z-z_0)^n}$
+$$f^{(k)}(z) = \sum\limits_{n=k}^{\infty}{\frac{n!}{(n-k)!} a_n (z-z_0)^{n-k}} = \sum\limits_{n=0}^{\infty}{\frac{(n+k)!}{n!} a_{n+k} (z-z_0)^n}$$
+dran denken: $0^0 = 1$
+
+\paragraph{Entwicklungssatz}
+$z_0 \in \mathbb{C}, A = \{z \in \mathbb{C} \mid R_1 < |z-z_0| < R_2 \}, f \in \mathcal{H}(A), z \in A, r \text{ beliebig mit } R_1 < r < R_2, n \in \mathbb{Z}$
+$$a_n = \frac{1}{2 \pi i} \int\limits_{|w-z_0| = r} {\frac{f(w)}{(w-z)^{n+1}} dw}$$
+
+$$f^{(n)}(z) = n! \cdot a_n \quad n \in \mathbb{N}_0$$
+
+\paragraph{c-Stelle}
+$G \text{ Gebiet}, f \in \mathcal{H}(G), f \neq \text{ konst.}$
+$$z_0 \textbf{ c-Stelle der Ordnung m } :\Leftrightarrow f(z_0) = c, f^{(j)}(z_0) = 0 \quad (j = 1, \ldots, m-1), f^{(m)}(z_0) \neq 0$$
+
+\paragraph{Identitätssatz}
+$G$ Gebiet, $f \in \mathcal{H}(G), z_0 \in G$.
+Aus $f(z)=0$ für unendlich viele sich in $z_0$ häufende Punkte $z \in G$ folgt $f \equiv 0$ in $G$.
+
+\paragraph{Cauchy- Abschätzung}
+$|a_n| \leq \frac{M(r)}{r^n} \text{ mit } M(r) := \max\limits_{z \in \partial B(z_0;r)}{|f(z)|}$
+
+\paragraph{Satz von Liouville}
+Eine beschränkte ganze Funktion ist konstant.
+
+\paragraph{Parsevalsche Formel}
+$\frac{1}{2 \pi} \int\limits_{0}^{2 \pi}{|f(z_0 + r \cdot e^{i \vartheta})|^2 d \vartheta = \sum\limits_{n=0}^\infty |a_n|^2 r^{2n}}$
+
+\paragraph{Maximumsprinzip}
+Es sei $G$ ein Gebiet, $f \in \mathcal{H}(G)$, $f \neq$ konst. Dann nimmt $|f|$ in $G$ kein Maximum an.
+
+\paragraph{Gebietstreue}
+Es sei $G \subset \mathbb{C}$, $f \in \mathcal{H}(G)$ und $f \neq \text{konst}$. Dann ist $f(G)$ ein Gebiet.
+
+\paragraph{Schwarzsches Lemma}
+Es bezeichne $D := \left\{z \in \mathbb{C} \,:\, |z| < 1 \right\}$ die Einheitskreisscheibe. Sei $f \colon D \to D$ eine holomorphe Funktion mit $f(0) = 0$. Dann gilt $|f(z)| \leq |z| \; \forall \, z \in D$ und $|f^\prime(0)|\leq 1$. Falls in einem Punkt $z_0 \in \mathbb{D}, z_0 \neq 0$ die Gleichheit $|f(z_0)| = |z_0|$ besteht oder $|f^\prime\!\,(0)| = 1$ gilt, so ist $f(z) = e^{i \lambda} \cdot z$ für ein passendes $\lambda \in \mathbb{R}$.
+
+\paragraph{Folgerung für biholomorphe Abbildungen $f \colon D \rightarrow D$}
+Es sei $a \in D$ und $f \in \mathcal{H}(D)$ mit $|f(z)| \leq 1, z \in D$. Es gilt:
+$$|f^\prime(a)| \leq \frac{1 - |f(a)|^2}{1 - |a|^2}$$
+
+\paragraph{Satz von Morera}
+Es sei $U \subset \mathbb{C}$ Gebiet und $f \colon U \rightarrow \mathbb{C}$ eine stetige Funktion. Für jedes in $U$ gelegene abgeschlossene Dreieck $\Delta$ verschwinde das Kurvenintegral über die Randkurve des Dreiecks, d.h. $\oint_{\partial\Delta} f(z)\, \mathrm{d}z = 0$. Dann ist $f$ holomorph auf $U$.
+
+\paragraph{Lemma von Goursat}
+$G$ Gebiet, $p \in G$, $f \in \mathcal{H}(G \backslash\{p\}) \cap C(G)$. Dann gilt für jedes abgeschlossene Dreieck $\Delta$ in $G$:
+$\int\limits_{\partial \Delta}{f(z)dz} = 0$
+
+\paragraph{Rechnen mit komplexen Zahlen}
+$$\frac{1}{z} = \frac{\overline{z}}{|z|^2}, \quad z \overline{z} = |z|^2$$
+$$|e^{i \phi}| = 1, \quad \phi \in \mathbb{R}$$
+$$Re(z) = \frac{z+\bar{z}}{2}, \quad Im(z) = \frac{z-\bar{z}}{2i}$$
+$$|z+w|^2 = |z|^2+|w|^2 + 2 \text{Re}(\overline{z}w)$$
+
+\paragraph{Rechnen mit Beträgen}
+$$|a| < |b| \Leftrightarrow |a|^2 < |b|^2$$
+
+\paragraph{isolierte Singularität}
+Die Funktion $f$ sei holomorph auf einer punktierten Umgebung von
+$z_0 \in \mathbb{C}$. Dann heißt $z_0$ \textbf{isolierte Singularität} von $f$. 
+
+\paragraph{Riemannscher Hebbarkeitssatz}
+Es sei $G \subset \mathbb{C}$ ein Gebiet und $z_0$ ein Punkt von $G$. Die Funktion $f$ sei auf $G \backslash \{z_0\}$ holomorph und bei $z_0$ beschränkt, d.h. $\exists \text{ Umgebung } U \subset G \text{ von } z_0, M \in \mathbb{R} \colon |f(z)| \leq M \quad \forall z \in U \backslash \{z_0\}$. Dann lässt sich $f$ eindeutig zu einer holomorphen Funktion auf ganz $G$ fortsetzen (mit $f(z_0) = \lim\limits_{z \rightarrow z_0} f(z)$).
+
+$z_0$ heißt dann \textbf{hebbare Singularität} von $f$.
+
+\paragraph{Polstelle, wesentliche Singularität}
+Es sei $z_0$ eine isolierte Singularität von $f$.
+\begin{enumerate}
+\item Wenn $\lim\limits_{z \rightarrow z_0} |f(z)| = + \infty$ gilt, heißt $z_0$ \textbf{Pol(stelle)} von $f$
+$$\lim\limits_{z \to z_0} (z-z_0)^k f(z) \text{ ex. und k minimal } \Rightarrow \textbf{ Pol k-ter Ordnung}$$
+\item Ist $z_0$ weder hebbare Singularität noch Polstelle von $f$, so heißt $z_0$ \textbf{wesentliche Singularität} von $f$.
+
+Eine wesentliche Singularität liegt also genau dann vor, wenn es Folgen $z_n, z_n^\prime$ im
+Definitionsbereich von $f$ gibt mit $z_n \rightarrow z_0, z_n^\prime \rightarrow z_0$, so dass $f(z_n)$ eine beschränkte und $f(z_n^\prime)$ eine unbeschränkte Folge ist.
+
+\end{enumerate}
+
+\paragraph{Singularitäten aus Laurentreihe bestimmen}
+$z_0$ isolierte Singularität, $f$ holomorph auf einer punktierten Kreisscheibe um $z_0$.
+	Liegt in $z_0$ ein \textbf{Pol $n$-ter Ordnung} vor, so ist der kleinste Grad der Laurentreihe gerade $-n$, d.h. der Hauptteil der Laurentreihe besteht aus genau $n$ Partialsummen; 
+	Liegt in $z_0$ eine \textbf{hebbare Singularität}, so ist der Hauptteil gleich $0$; 
+	Liegt in $z_0$ eine \textbf{wesentliche Singularität}, so besteht der Hauptteil aus unendlich vielen Partialsummen.
+
+\paragraph{Laurentreihenentwicklung}
+Trick: $\frac{1}{z^2} \overset{\text{Aufleiten}}{\rightarrow} -\frac{1}{z} \overset{\text{Entwickeln}}{\rightarrow} \ldots \overset{\text{Ableiten}}{\rightarrow} \ldots$ nicht bei Logarithmus in der Aufleitung
+
+\paragraph{Partialbruchzerlegung}
+\begin{enumerate}
+\item Polynomdivision machen, damit Grad(Zähler) $\leq$ Grad(Nenner)
+\item vom Restbruch $R$ die Nullstellen mit Vielfachheiten des Nenners ermitteln (beachte: auch das komplex konjugierte ist Nullstelle)
+\item Der Rest ist straight-forward. Bsp.: Der Nenner habe die NST $c_1$ mit Vielfachheit 1 und die NST $c_2$ mit Vielfachheit 2. Dann ist der Ansatz: $$R(z) = \frac{a}{(z-c_1)} + \frac{b}{(z-c_1)^2} + \frac{c}{(z-c_2)}$$
+\item Auflösen (mit Hauptnenner multiplizieren) und dann Koeffizientenvergleich.
+\end{enumerate}
+Formel von Simon:
+$$f(z) = \frac{1}{(z-a)(z-b)} = \left(\frac{1}{z-a} - \frac{1}{z-b}\right) \frac{1}{a-b}$$
+
+\paragraph{Rechenregeln Sinus und Kosinus}
+$\sin(x) = \frac{1}{2i} (e^{ix}-e^{-ix})$, $\cos(x) = \frac{1}{2} (e^{ix}+e^{-ix})$
+$$\sin(-\alpha) = - \sin(\alpha), \quad \cos(-\alpha) = \cos(\alpha)$$
+$$\sin^2(\alpha) + \cos^2(\alpha) = 1$$
+$$\cos(\alpha) = \sin(90^\circ - \alpha), \quad \sin(\alpha) = \cos(90^\circ - \alpha)$$
+
+\paragraph{sinh und cosh}
+$\sinh(x) = \frac{e^x - e^{-x}}{2}, \quad \cosh(x) = \frac{e^x + e^{-x}}{2}$
+
+\paragraph{Satz von Rouche}
+Es seien $f$ und $g$ holomorph in einer Umgebung von $\overline{G}$, wobei $G$ ein positiv berandetes Gebiet ist. Auf $\partial G$ gelte
+$$|f(z)-g(z)| < |f(z)|.$$
+Dann haben $f$ und $g$ gleichviele Nullstellen (mit Vielfachheit gezählt) in $G$.
+
+\paragraph{Nullstelle $N$-ter Ordnung}
+$f(z_0) = f^\prime(z_0) = \ldots = f^{(N-1)}(z_0) = 0, f^{(N)}(z_0) \neq 0$ Nullstelle $N$-ter Ordnung
+
+\paragraph{Bestimmung von Residuen}
+$$f(z) = \frac{A(z)}{B(z)}, A(z_0) \neq 0, B(z_0) = 0, B^\prime(z_0) \neq 0 \Rightarrow \text{Res}(f;z_0) = \lim\limits_{z \to z_0} (z-z_0) f(z) = \frac{A(z_0)}{B^\prime(z_0)}$$
+Hat $f$ in $z_0$ Polstelle $k$-ter Ordnung $\Rightarrow \text{Res}(f;z_0) = \frac{1}{(k-1)!} \lim\limits_{z \to z_0} D^{k-1} \left((z-z_0)^k \cdot f(z)\right)$
+Hat $f$ in $z_0$ eine Nullstelle $N$-ter Ordnung ("Polstelle $N$-ter Ordnung $\hat{=}$ Nullstelle $-N$-ter Ordnung") $\Rightarrow \text{Res}\left(\frac{f^\prime}{f};z_0\right) = N$
+
+\paragraph{Residuensatz}
+$G \subset \mathbb{C}$ offen, $f \in \mathcal{H}(G \backslash \{a_1, \ldots, a_m\}), \Gamma$ geschlossener Weg in $G$ mit $a_j \notin |\Gamma|, j=1, \ldots, m$ und $n(\Gamma, w) = 0 \quad \forall w \in \mathbb{C} \backslash G$. Dann gilt
+
+$$\int\limits_{\Gamma}{f(z) dz} = 2 \pi i \sum\limits_{j=1}^m{n(\Gamma; a_j) \cdot \text{Res}(f;a_j)}$$
+
+\paragraph{Reelle Integrale}
+$f(z) = \frac{p(z)}{q(z)}$, $p$, $q$ Polynome mit Grad(q)-Grad(p) $\geq 2$, q hat keine reellen Nullstellen,
+$z_1, \ldots, z_m$ Polstellen von $f$ in der oberen Halbebene. Dann:
+$$\int\limits_{-\infty}^{\infty}{f(x)dx} = 2 \pi i \sum\limits_{j=1}^m{\text{Res}(f;z_j)}$$
+
+$f(z) = \frac{p(z)}{q(z)}$, $p$, $q$ Polynome mit Grad(q)-Grad(p) $\geq 1$, f keine reellen Polstellen außer vllt. in 0 Polstelle 1. Ordnung, $z_1, \ldots, z_m$ Polstellen von $f$ in der oberen Halbebene. Dann:
+$$\text{CH} \int\limits_{-\infty}^{\infty}{f(x) e^{ix} dx} = \pi i \cdot \text{Res}(f;0) + 2 \pi i \sum\limits_{j=1}^m{\text{Res}(f(z) e^{iz};z_j)}$$
+
+\end{document}
