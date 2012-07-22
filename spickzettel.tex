@@ -269,8 +269,8 @@ $$a^b = e^{b \log (a)}, \quad a,b \in \mathbb{C}, a \neq 0$$
 
 \paragraph{Einige Reihendarstellungen}
 $$\exp(z) = \sum\limits_{n=0}^\infty{\frac{z^n}{n!}}$$
-$$\sin(z) = \sum\limits_{n=0}^\infty{\frac{(-1)^n}{(2n+1)!} z^{2n+1}}$$
-$$\cos(z) = \sum\limits_{n=0}^\infty{\frac{(-1)^n}{(2n)!} z^{2n}}$$
+$$\sin(z) = \sum\limits_{n=0}^\infty{\frac{(-1)^n}{(2n+1)!} z^{2n+1}}, \quad \sinh(z) = \sum\limits_{n=0}^\infty{\frac{z^{2n+1}}{(2n+1)!}}$$
+$$\cos(z) = \sum\limits_{n=0}^\infty{\frac{(-1)^n}{(2n)!} z^{2n}}, \quad \cosh(z) = \sum\limits_{n=0}^\infty{\frac{z^{2n}}{(2n)!}}$$
 $$\log(z) = \sum\limits_{n=1}^\infty{(-1)^{n-1} \frac{(z-1)^n}{n}}, \quad |z-1|<1 \quad \text{(Hauptzweig)}$$
 
 \paragraph{Nette Funktionen, die man kennen sollte}
@@ -361,6 +361,8 @@ $\frac{1}{2 \pi} \int\limits_{0}^{2 \pi}{|f(z_0 + r \cdot e^{i \vartheta})|^2 d 
 
 \paragraph{Maximumsprinzip}
 Es sei $G$ ein Gebiet, $f \in \mathcal{H}(G)$, $f \neq$ konst. Dann nimmt $|f|$ in $G$ kein Maximum an.
+Alternative Formulierung: 
+$G \subset \mathbb{C}$ beschränktes Gebiet, $f \in \mathcal{H}(G) \cap C(\overline{G})$. Dann $|f(z)| \leq \max\limits_{\xi \in \partial G} f(\xi)$ für $z \in G$. "$=$" nur wenn $f$ konstant.
 
 \paragraph{Gebietstreue}
 Es sei $G \subset \mathbb{C}$, $f \in \mathcal{H}(G)$ und $f \neq \text{konst}$. Dann ist $f(G)$ ein Gebiet.
