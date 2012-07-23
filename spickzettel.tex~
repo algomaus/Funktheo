@@ -274,7 +274,7 @@ $$\exp(z) = \sum\limits_{n=0}^\infty{\frac{z^n}{n!}}$$
 $$\sin(z) = \sum\limits_{n=0}^\infty{\frac{(-1)^n}{(2n+1)!} z^{2n+1}}, \quad \sinh(z) = \sum\limits_{n=0}^\infty{\frac{z^{2n+1}}{(2n+1)!}}$$
 $$\cos(z) = \sum\limits_{n=0}^\infty{\frac{(-1)^n}{(2n)!} z^{2n}}, \quad \cosh(z) = \sum\limits_{n=0}^\infty{\frac{z^{2n}}{(2n)!}}$$
 $$\log(z) = \sum\limits_{n=1}^\infty{(-1)^{n-1} \frac{(z-1)^n}{n}}, \quad |z-1|<1 \quad \text{(Hauptzweig)}$$
-$$(1+x)^\alpha = \sum\limits_{k=0}^{\infty}{{\alpha \choose k} x^k}, \quad \alpha \in \mathbb{R}, -1 < x < 1, \quad {n \choose k} = \frac{n!}{k! (n-k)!}$$
+$$(1+x)^\alpha = \sum\limits_{k=0}^{\infty}{{\alpha \choose k} x^k}$$
 
 \paragraph{Nette Funktionen, die man kennen sollte}
 Einheitskreis: $f(t)=e^{it}, \quad t \in [0,2\pi]$
