@@ -131,7 +131,7 @@ $$f^\prime(x + iy) = D_1 u(x, y) + i \cdot D_1 v(x, y)$$
 \paragraph{Konforme Abbildung}
 $f \in \mathcal{H}(G), f^\prime(z) \neq 0$ heißt \textbf{konforme Abbildung}. Sie erhält Winkel in Größe und Drehsinn.
 
-
+\begin{minipage}{0.5\textwidth}
 \paragraph{Ableitungsregeln}
 $$\left(f(x) \cdot g(x)\right)^\prime = f^\prime(x) \cdot g(x) + f(x) \cdot g^\prime(x)$$
 $$\left(\frac{f(x)}{g(x)}\right)^\prime = \frac{f^\prime(x) \cdot g(x) - f(x) \cdot g^\prime(x)}{g(x)^2}$$
@@ -139,10 +139,12 @@ $$\left(f(g(x))\right)^\prime = f^\prime(g(x)) \cdot g^\prime(x)$$
 $$(f^{-1})^\prime(y) = \frac{1}{f(f^{-1}(y))}$$
 $$(\log x)^\prime = \frac{1}{x}$$
 $$\frac{d}{dw} z^w = \log(z) z^w$$
-
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
 \paragraph{Integrationsregeln}
 $$\int x^n dx = \frac{x^{n+1}}{n+1}+c$$
 $$\int_a^b f^\prime(x) \cdot g(x) dx = [f(x) \cdot g(x)]_a^b - \int_a^b f(x) \cdot g^\prime(x) dx$$
+$$\int e^{ax}dx = \frac{1}{a} e^{ax}, \quad a \neq 0$$
 Substitutionsregel:
 \begin{enumerate}
 \item Substituiere $u = u(x)$
@@ -151,7 +153,7 @@ Substitutionsregel:
 \item Bei unbestimmten Integralen: Danach Rücksubstitution
 \end{enumerate}
 $$\int_a^b f(x) dx = \int_{u(a)}^{u(b)} f(u(x)) du$$
-$$\int e^{ax}dx = \frac{1}{a} e^{ax} \quad a \neq 0$$
+\end{minipage}
 
 \paragraph{Häufungspunkt}
 $z_0$ heißt Häufungspunkt von $M$
@@ -250,9 +252,9 @@ $\infty$ liegt auf keinem Kreis und auf jeder Geraden.
 $z_1,z_2,z_3$ auf verallgemeinertem Kreis $K$. Spiegelung von $z$ an $K$:
 $$(\varrho_K(z),z_1,z_3,z_3) = \overline{(z,z_1,z_2,z_3)}$$
 
-$l$ Gerade mit $z(t) = a + t e^{i \varphi}, a \in \mathbb{C}, \varphi \in \mathbb{R} \text{ fest}$.
+$L$ Gerade mit $z(t) = a + t e^{i \varphi}, a \in \mathbb{C}, \varphi \in \mathbb{R} \text{ fest}$.
 Dann:
-$$\varrho_l(z) = e^{2 i \varphi} (\overline{z} - \overline{a}) + a$$
+$$\varrho_L(z) = e^{2 i \varphi} (\overline{z} - \overline{a}) + a$$
 
 An Kreis $K$ um $a$ mit Radius $R$:
 $$\varrho_K(z) = a + \frac{R^2}{\overline{z}- \overline{a}}$$
