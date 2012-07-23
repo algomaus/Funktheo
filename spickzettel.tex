@@ -1,7 +1,7 @@
 %%This is a very basic article template.
 %%There is just one section and two subsections.
 \documentclass[a4paper, 10pt, DIV20, headings=small]{scrartcl}
-\usepackage[left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm,includeheadfoot]{geometry}
+\usepackage[left=0.5cm,right=0.5cm,top=0.4cm,bottom=0.4cm,includeheadfoot]{geometry}
 \usepackage{cite}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -103,9 +103,12 @@ Wird ausgedrückt durch $|z-a| = |z-b|$
 \item $f(z)$ ist nicht stetig in $p$: Folge $z_n$ angeben, sodass gilt $z_n \overset{n \rightarrow \infty}{\longrightarrow} p$, $f(z_n) \nrightarrow f(p)$ für $n \rightarrow \infty$. Beliebte Folgen für $p=0$: $1/n$, $i/n$, $(i+1)/n$
 \item $f(z)$ ist stetig in $p$: Zeige $f(z) \overset{z \rightarrow p}{\longrightarrow} f(p)$. Für $f(p)=0$ bietet es sich an, zu zeigen dass $|f(z)| \overset{z \rightarrow p}{\longrightarrow} 0$.
 \end{itemize}
+$f$ heißt stetig in $z_0 :\Leftrightarrow \lim f(z) = f(z_0)$ \\ $f$ heißt gleichmäßig stetig auf $M$, falls $\forall \epsilon > 0 \quad \exists \delta > 0 \quad \forall z,z^\prime \in M \colon (|z-z^\prime| < \delta \Rightarrow |f(z)-f(z^\prime)| < \epsilon)$
+
+
 
 \paragraph{Stereographische Projektion}
-$$\pi(x_1,x_2,x_3) = \frac{x_1 + i x_2}{1 - x_3}$$
+$$\Pi(x_1,x_2,x_3) = \frac{x_1 + i x_2}{1 - x_3}$$
 $$p(x+iy) = \frac{1}{1+x^2+y^2}\cdot (2x, 2y, x^2+y^2-1)$$
 
 \paragraph{Chordaler Abstand}
@@ -155,6 +158,11 @@ Substitutionsregel:
 $$\int_a^b f(x) dx = \int_{u(a)}^{u(b)} f(u(x)) du$$
 \end{minipage}
 
+\paragraph{Abschätzungen von Integralen}
+$|\int\limits_{a}^b{w(t)dt}| \leq \int\limits_a^b{|w(t)|dt}$
+\\
+Bei gleichmäßig Konvergenten Funktionenfolgen kann man den Limes und das Integral vertauschen.
+
 \paragraph{Häufungspunkt}
 $z_0$ heißt Häufungspunkt von $M$
 $$\Leftrightarrow \forall \varepsilon > 0 \quad \exists z \in M \backslash \{z_0\} \quad z \in D(z_0, \varepsilon) = \{z \in \mathbb{C} \mid |z-z_0| < \varepsilon\}$$
@@ -193,8 +201,7 @@ $$\sum\limits_{k=0}^{\infty}a_n \text{ konvergent } \Rightarrow a_n \rightarrow 
 $$\left(1+\frac{1}{n}\right)^n \rightarrow e \quad (n \rightarrow \infty)$$
 
 \paragraph{Quotientenkriterium und Wurzelkriterium}
-$$\limsup\limits_{k \rightarrow \infty} \left|\frac{a_{k+1}}{a_k}\right| \leq q < 1 \Rightarrow \sum\limits_{k=0}^\infty a_k \text{ absolut konvergent}$$
-$$\limsup\limits_{k \rightarrow \infty} \sqrt[k]{|a_k|} \leq q < 1 \Rightarrow \sum\limits_{k=0}^\infty a_k \text{ absolut konvergent}$$
+$$\limsup\limits_{k \rightarrow \infty} \left|\frac{a_{k+1}}{a_k}\right| \leq q < 1 \Rightarrow \sum\limits_{k=0}^\infty a_k \text{ absolut konvergent} \qquad \limsup\limits_{k \rightarrow \infty} \sqrt[k]{|a_k|} \leq q < 1 \Rightarrow \sum\limits_{k=0}^\infty a_k \text{ absolut konvergent}$$
 Wenn $> 1$ (bei Quotientenkriterium $\liminf$): divergent
 
 \paragraph{Geometrische Reihe}
@@ -204,8 +211,7 @@ $$\sum\limits_{k=0}^\infty q^k \text{ mit } |q| < 1 \text{ konvergiert gegen } \
 $$R = \frac{1}{\limsup\limits_{k\rightarrow \infty} \sqrt[k]{|a_n|}} = \frac{1}{\lim\limits_{k\rightarrow \infty}{|\frac{a_{k+1}}{a_k}|}}$$
 
 \paragraph{Die Folgen $\sqrt[n]{n}$, $\sqrt[n]{x}$}
-$$\lim_{n \rightarrow \infty} \sqrt[n]{n} = 1$$
-$$\lim_{n \rightarrow \infty} \sqrt[n]{x} = 1 \quad x \in \mathbb{R}, x > 0$$
+$$\lim_{n \rightarrow \infty} \sqrt[n]{n} = 1 \qquad \qquad \lim_{n \rightarrow \infty} \sqrt[n]{x} = 1 \quad x \in \mathbb{R}, x > 0$$
 
 \paragraph{Möbiustransformation}
 $T \colon \hat{\mathbb{C}} \rightarrow \hat{\mathbb{C}}$ Möbiustransformation $\Leftrightarrow$
@@ -422,6 +428,16 @@ $z_0$ isolierte Singularität, $f$ holomorph auf einer punktierten Kreisscheibe 
 
 \paragraph{Laurentreihenentwicklung}
 Trick: $\frac{1}{z^2} \overset{\text{Aufleiten}}{\rightarrow} -\frac{1}{z} \overset{\text{Entwickeln}}{\rightarrow} \ldots \overset{\text{Ableiten}}{\rightarrow} \ldots$ nicht bei Logarithmus in der Aufleitung
+\newline
+
+$a, b \in \mathbb{C}, 0 < |a| < |b| < \infty$, seien gegeben.
+Gesucht sind für $f(z) = \frac{1}{(z-a)(z-b)}$ die Laurentreihen um $z_0 = 0$. 
+$f$ ist holomorph in $R_1 = \{z \mid |z| < |a|\}$
+$f$ ist holomorph in $R_2 = \{ z \mid |a| < |z| <|b|\}$
+$f$ ist holomorph in $R_3 = \{z \mid |b| < |z|\}$\\
+Die Reihe in $R_1$: $f(z) = \frac{1}{a-b} \sum\limits_{n=0}^\infty{\left(\frac{1}{b^{n+1}}- \frac{1}{a^{n+1}}\right) z^n}$
+Die Reihe in $R_2$:  $f(z) = \frac{1}{a-b} \left( \sum\limits_{n=1}^\infty{\frac{a^{n-1}}{z^n}} + \sum\limits_{n=1}^\infty{\frac{z^{n-1}}{b^n}}\right)$
+Die Reihe in $R_3$: $f(z) = \frac{1}{a-b} \sum\limits_{n=0}^\infty{\frac{a^ {n-1}-b^{n-1}}{z^n}}$
 
 \paragraph{Partialbruchzerlegung}
 \begin{enumerate}
@@ -467,5 +483,18 @@ $$\int\limits_{-\infty}^{\infty}{f(x)dx} = 2 \pi i \sum\limits_{j=1}^m{\text{Res
 
 $f(z) = \frac{p(z)}{q(z)}$, $p$, $q$ Polynome mit Grad(q)-Grad(p) $\geq 1$, f keine reellen Polstellen außer vllt. in 0 Polstelle 1. Ordnung, $z_1, \ldots, z_m$ Polstellen von $f$ in der oberen Halbebene. Dann:
 $$\text{CH} \int\limits_{-\infty}^{\infty}{f(x) e^{ix} dx} = \pi i \cdot \text{Res}(f;0) + 2 \pi i \sum\limits_{j=1}^m{\text{Res}(f(z) e^{iz};z_j)}$$
+
+\paragraph{Funktionenfolgen}
+$U \subset \mathbb{C}$ sei eine offene Menge, $(f_k)$ eine Folge von Funktionen $f_k : U \to \mathbb{C}$. \\
+$f_k \rightarrow f (k \rightarrow \infty)$ \textbf{punktweise} auf $U$ bedeutet:
+$\forall \epsilon > 0 \quad \forall z \in U \quad \exists k_0 \in \mathbb{N} \quad \forall k \geq k_0 \colon |f_k (z) - f (z)| < \epsilon.$
+\\
+Für $g \colon U \to \mathbb{C}$ bezeichnen wir durch $||g||_U$ die \textbf{Supremumsnorm}: $||g||_U = \sup \{|g(z)| \mid z \in U \}$
+\\
+$f_k \rightarrow f (k \rightarrow \infty)$ \textbf{gleichmäßig} auf $U$, falls gilt: $\lim ||f_k - f||_U = 0$.
+\\
+$f_k \rightarrow f (k \rightarrow \infty)$ \textbf{lokalgleichmäßig} auf $U$, falls gilt: $\forall z \in U \quad \exists D(z, \lambda) \subset U \quad ||f_k- f ||_{D(z,\lambda)} \rightarrow 0 (k \rightarrow \infty)$.
+
+
 
 \end{document}
